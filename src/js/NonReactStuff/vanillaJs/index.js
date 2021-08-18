@@ -12,3 +12,4 @@
 //import './concepts/CustomEvents';
 
 //import './concepts/RandomNumber';
+import './Algos/splitAndJoin';

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Accordion from "./Accoridan/Accordian";
 import ProgressSteps from "./ProgressSteps/ProgressSteps";
+import FiveStarReviews from "./FiveStarReviews/FiveStarReviews";
 
 
 class IndexComponentUIExamples extends Component {
@@ -43,6 +44,10 @@ class IndexComponentUIExamples extends Component {
                 <div className="section">
                     <div className="section-hdr">Subway Steps</div>
                     <ProgressSteps steps={this.state.progressSteps} />
+                </div>
+                <div className="section">
+                    <div className="section-hdr">Five Star reviews</div>
+                    <FiveStarReviews/>
                 </div>
             </div>
         );

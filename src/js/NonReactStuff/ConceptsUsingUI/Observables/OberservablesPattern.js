@@ -30,7 +30,7 @@ let intervalId;
 const intervalFunction = function (interval) {
     intervalId = setTimeout(function () {
         $(increaseButton).trigger('click');
-        intervalFunction(10000);
+        intervalFunction(10 * 60 * 1000);
     }, interval);
 };
 
