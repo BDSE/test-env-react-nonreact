@@ -12,4 +12,13 @@
 //import './concepts/CustomEvents';
 
 //import './concepts/RandomNumber';
-import './Algos/splitAndJoin';
+//import './Algos/splitAndJoin';
+
+
+//import './Algos/JessieAndCookiesHeapProblem';
+
+//import './Algos/EqualStacks';
+
+//import './Algos/SuperResucedString';
+
+import  './Algos/SuperDigit';

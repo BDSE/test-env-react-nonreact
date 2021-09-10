@@ -21,7 +21,7 @@ const LinkedList = (function () {
         getHeader: function(){
           return this.headNode;
         },
-        reverse: function () {
+        reverse2: function () {
             var prev1, prev2, curentNode = this.headNode;
             while(curentNode){
                 if(prev1 && prev2){
@@ -40,6 +40,27 @@ const LinkedList = (function () {
                     prev2 = prev1;
                     prev1 = curentNode;
                     curentNode = curentNode.getNextNode();
+                }
+            }
+        },
+        reverse: function () {
+            var prevNode, nextNode, currentNode = this.headNode;
+            while(currentNode){
+                if (!currentNode.getNextNode()){
+                    this.headNode = currentNode;
+                    currentNode.nextNode = prevNode ? prevNode : null;
+                    currentNode = null;
+                }else{
+                    nextNode = currentNode.nextNode;
+                    if (prevNode){
+                        currentNode.nextNode = prevNode;
+                    }else{
+                        //header node
+                        currentNode.nextNode = null;
+                        this.lastNode = currentNode;
+                    }
+                    prevNode = currentNode;
+                    currentNode = nextNode;
                 }
             }
         },

@@ -53,14 +53,14 @@ const handleMousemove = function () {
 howerEle.addEventListener('mousemove', handleMousemove);
 
 
-var ele = document.getElementById('slider');
-
-var cb = function () {
-    console.log("jagga");
-};
-
-var debouncedMethod = dt.debounce(cb);
-
-ele.addEventListener('mousemove', debouncedMethod);
+// var ele = document.getElementById('slider');
+//
+// var cb = function () {
+//     console.log("jagga");
+// };
+//
+// var debouncedMethod = dt.debounce(cb);
+//
+// ele.addEventListener('mousemove', debouncedMethod);
 
 

@@ -5,13 +5,36 @@ class ProgressSteps extends Component {
         super(props);
 
         this.state = {
-            stepWidth: 100 / this.props.steps.length,
+            steps: [
+                {
+                    text: 'Step1',
+                    isCurrent: false
+                },
+                {
+                    text: 'Step2',
+                    isCurrent: true
+                },
+                {
+                    text: 'Step3',
+                    isCurrent: false,
+                    highestStep: true
+                },
+                {
+                    text: 'Step4',
+                    isCurrent: false
+                },
+                {
+                    text: 'Step5',
+                    isCurrent: false
+                }
+            ],
             currentIndex: 0
         };
     }
 
     render() {
-        const steps = this.props.steps;
+        const steps = this.state.steps;
+        const stepsWidth =  100 / steps.length;
         let highestIndex = 0;
 
         for (let i = 0; i < steps.length; i++) {
@@ -25,7 +48,7 @@ class ProgressSteps extends Component {
                 <ul>
                     {steps.map((step, index) => {
                             return (
-                                <li key={index} className={"step " + (index <= highestIndex ? 'visited ' : 'future ') + (step.isCurrent ? 'current' : '')} style={{width: `${this.state.stepWidth}%`}}>
+                                <li key={index} className={"step " + (index <= highestIndex ? 'visited ' : 'future ') + (step.isCurrent ? 'current' : '')} style={{width: `${stepsWidth}%`}}>
                                     <div className="icon-div icon">
 
                                     </div>

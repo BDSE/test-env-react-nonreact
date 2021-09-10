@@ -69,4 +69,4 @@ var lookForImageClass = function (categoryName) {
 
 var res = lookForImageClass("  rehabilitation services physical therapy ");
 
-console.log(res);
+console.log("get image >>>>", res);

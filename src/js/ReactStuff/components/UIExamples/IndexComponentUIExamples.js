@@ -7,31 +7,7 @@ import FiveStarReviews from "./FiveStarReviews/FiveStarReviews";
 class IndexComponentUIExamples extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            progressSteps: [
-                {
-                    text: 'Step1',
-                    isCurrent: false
-                },
-                {
-                    text: 'Step2',
-                    isCurrent: true
-                },
-                {
-                    text: 'Step3',
-                    isCurrent: false,
-                    highestStep: true
-                },
-                {
-                    text: 'Step4',
-                    isCurrent: false
-                },
-                {
-                    text: 'Step5',
-                    isCurrent: false
-                }
-            ]
-        };
+        this.state = {};
     }
 
     render() {
@@ -43,7 +19,7 @@ class IndexComponentUIExamples extends Component {
                 </div>
                 <div className="section">
                     <div className="section-hdr">Subway Steps</div>
-                    <ProgressSteps steps={this.state.progressSteps} />
+                    <ProgressSteps />
                 </div>
                 <div className="section">
                     <div className="section-hdr">Five Star reviews</div>
