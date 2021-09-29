@@ -7,7 +7,7 @@
 //import './DS/LinkedList';
 //import './Algos/MychartRequestToJsObject';
 
-//import './JSOutputQuestions';
+import './JSOutputQuestions';
 
 //import './concepts/CustomEvents';
 
@@ -21,4 +21,6 @@
 
 //import './Algos/SuperResucedString';
 
-import  './Algos/SuperDigit';
+//import  './Algos/SuperDigit';
+
+//import './concepts/vanilaJsTest';

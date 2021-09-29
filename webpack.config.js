@@ -33,18 +33,15 @@ let config = {
     },
     context: path.resolve(context),
     output: {
-        filename: '[name].[chunkhash].js',
+        filename: '[name].js',
         path: path.resolve(context, 'build'),
         publicPath: './'
     },
     devServer: {
         port: 3000,
         open: true,
-        proxy: {
-            '/api': 'http://localhost:8080'
-        },
         historyApiFallback: true,
-        contentBase: './src/index.html',
+        contentBase: path.join(context, 'build'),
         watchContentBase: true
     },
     module: {
@@ -115,7 +112,7 @@ let config = {
     },
     plugins: [
         new CleanDistFolder([path.resolve(context, 'build')]),
-        new ExtractTextPlugin("[name].[chunkhash].css"),
+        new ExtractTextPlugin("[name].css"),
         new htmlWebpackPlugin({
             chunks: ['manifest', 'commonVendor', 'reactVendor', 'reactApp'],
             title: 'Test React App!',
@@ -172,11 +169,11 @@ if (!isPrd) {
                 ignored:[/lib/, /node_modules/, /build/, /node/]
             }
         });
-        config.plugins.push(
-            new WebpackShellPlugin({
-                onBuildStart: ['echo "#################### BUILD START ####################"'], onBuildExit: ['echo "#################### BUILD EXIT ####################"', 'cp-res']
-            })
-        );
+        // config.plugins.push(
+        //     new WebpackShellPlugin({
+        //         onBuildStart: ['echo "#################### BUILD START ####################"'], onBuildExit: ['echo "#################### BUILD EXIT ####################"', 'cp-res']
+        //     })
+        // );
     }
     if (process.env.livereload) {
         const livereloadOptions = {

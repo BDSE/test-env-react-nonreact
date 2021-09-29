@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 
-import IndexComponentUIExamples from "./components/UIExamples/IndexComponentUIExamples";
+import Accordion from "./components/UIExamples/Accoridan/Accordian";
+import ProgressSteps from "./components/UIExamples/ProgressSteps/ProgressSteps";
+import FiveStarReviews from "./components/UIExamples/FiveStarReviews/FiveStarReviews";
+import ZipCodeForm from "./components/UIExamples/ZipCodeForm";
 
 export default class App extends Component {
     constructor(props) {
@@ -12,7 +15,22 @@ export default class App extends Component {
             <div>
                 <div className="container">
                     <div className="container-hdr">UI-Examples Components</div>
-                    <IndexComponentUIExamples />
+                    <div className="section">
+                        <div className="section-hdr">Accordian</div>
+                        <Accordion />
+                    </div>
+                    <div className="section">
+                        <div className="section-hdr">Subway Steps</div>
+                        <ProgressSteps />
+                    </div>
+                    <div className="section">
+                        <div className="section-hdr">Five Star reviews</div>
+                        <FiveStarReviews/>
+                    </div>
+                    <div className="section">
+                        <div className="section-hdr">ZipCode form</div>
+                        <ZipCodeForm/>
+                    </div>
                 </div>
             </div>
         );
