@@ -4,6 +4,7 @@ import Accordion from "./components/UIExamples/Accoridan/Accordian";
 import ProgressSteps from "./components/UIExamples/ProgressSteps/ProgressSteps";
 import FiveStarReviews from "./components/UIExamples/FiveStarReviews/FiveStarReviews";
 import ZipCodeForm from "./components/UIExamples/ZipCodeForm";
+import {UserSuggestions} from "./components/UIExamples/FriendsSuggestions";
 
 export default class App extends Component {
     constructor(props) {
@@ -30,6 +31,10 @@ export default class App extends Component {
                     <div className="section">
                         <div className="section-hdr">ZipCode form</div>
                         <ZipCodeForm/>
+                    </div>
+                    <div className="section">
+                        <div className="section-hdr">Friend Suggestion Algo</div>
+                        <UserSuggestions/>
                     </div>
                 </div>
             </div>

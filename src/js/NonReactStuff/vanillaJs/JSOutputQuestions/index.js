@@ -19,6 +19,7 @@ obj.test1.test(); // typea
 
 test2.call(obj);//typeb*/
 
+
 var inputs = [
     {
         id: 1,
